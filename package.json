@@ -1,0 +1,27 @@
+{
+  "name": "quicksort",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/app/index.html",
+  "scripts": {
+    "watch:app": "parcel watch src/app/index.html --out-dir build/app",
+    "watch:server": "parcel src/server/index.ts --target node --out-dir build/server",
+    "start:app": "parcel src/app/index.html --out-dir build/app",
+    "start:server": "nodemon build/server/index.js"
+  },
+  "author": "Anton Ekström, Jakob Bengtsson",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "@types/react": "^16.9.56",
+    "@types/react-dom": "^16.9.9",
+    "sass": "^1.29.0",
+    "typescript": "^4.0.5"
+  }
+}
