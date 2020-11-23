@@ -1,0 +1,34 @@
+@use '../style/typography' as *;
+@use '../style/colors' as *;
+@use '../style/features';
+@use '../style/input';
+
+main.app.compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    > section {
+        display: grid;
+        place-items: center;
+
+        &:nth-child(1) {
+            @include cols-0;
+            @include bg;
+        }
+
+        &:nth-child(2) {
+            @include cols-1;
+            @include bg;
+        }
+        
+        > button {
+            border-radius: 0;
+            width: 100%;
+            height: 100%;
+            background: none;
+
+            color: $fg;
+            font-size: 10rem;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@use './colors' as *;
+
+$font-size-xs: var(--font-size-xs);
+$font-size-s: var(--font-size-s);
+$font-size-m: var(--font-size-m);
+$font-size-l: var(--font-size-l);
+$font-size-xl: var(--font-size-xl);
+
+@mixin typography-root {
+    @include cols-0;
+
+    font-size: 13px;
+    font-family: 'Nunito';
+    color: $fg;
+
+    --font-size-xs: 1.2rem;
+    --font-size-s: 1.4rem;
+    --font-size-m: 1.7rem;
+    --font-size-l: 2.5rem;
+    --font-size-xl: 3rem;
+}
+
+h1, h2, h3, p, span, input, button, a, label {
+    font-family: 'Nunito';
+    font-weight: 500;
+    font-size: $font-size-s;
+    margin: 0;
+}
+
+h1 {
+    font-size: $font-size-xl;
+}
+
+h2 {
+    font-size: $font-size-l;
+}
+
+h3 {
+    font-size: $font-size-m;
+}

@@ -1,0 +1,51 @@
+
+$cl0: var(--cl0);
+$cl1: var(--cl1);
+$cl2: var(--cl2);
+$cl3: var(--cl3);
+
+$black: var(--black);
+$white: var(--white);
+
+$bg0: var(--bg0);
+
+$fg0: var(--fg0);
+
+$c0: var(--c0);
+
+$bg: var(--bg);
+$fg: var(--fg);
+$c: var(--c);
+
+@mixin colors-root {
+    --cl0: #e284b0;
+    --cl1:  #8849cf;
+    --cl2:  #49cf71;
+    --cl3:  #e46533;
+
+    --black: #20191c;
+    --white: #f5d6e4;
+
+    --bg0: var(--cl0);
+
+    --fg0: var(--black);
+
+    --c0: var(--cl1);
+}
+
+@mixin cols-0 {
+    --bg: var(--bg0);
+    --fg: var(--fg0);
+    --c: var(--c0);
+}
+
+@mixin cols-1 {
+    --bg: var(--black);
+    --fg: var(--white);
+    --c: var(--c0);
+}
+
+@mixin bg {
+    background-color: $bg;
+    color: $fg;
+}
