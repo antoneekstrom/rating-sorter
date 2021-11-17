@@ -1,33 +1,36 @@
-import React, { useEffect } from 'react';
-import { Query } from '../hooks';
-import './Compare.scss';
+import React, { useEffect } from "react";
+import { Query } from "../hooks/useQuery";
+import "./Compare.scss";
 
 export type CompareProps = {
-    query: Query<string>
-    options: {a: string, b: string}
-}
+    query: Query<string>;
+    options: { a: string; b: string };
+};
 
 export default function Compare(props: CompareProps) {
-    const { query, options: { a, b } } = props;
+    const {
+        query,
+        options: { a, b },
+    } = props;
 
     useEffect(() => {
-        document.addEventListener('keydown', keyListener);
-        return () => document.removeEventListener('keydown', keyListener);
-        
+        document.addEventListener("keydown", keyListener);
+        return () => document.removeEventListener("keydown", keyListener);
+
         function keyListener(e: KeyboardEvent) {
             switch (e.key) {
-                case 'A':
-                case 'Q':
-                case 'ArrowLeft':
+                case "A":
+                case "Q":
+                case "ArrowLeft":
                     query.resolve(a);
 
-                case 'D':
-                case 'W':
-                case 'ArrowRight':
+                case "D":
+                case "W":
+                case "ArrowRight":
                     query.resolve(b);
             }
         }
-    }, [])
+    }, []);
 
     return (
         <main className="app compare">

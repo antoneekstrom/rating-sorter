@@ -1,7 +1,7 @@
-@use '../style/typography' as *;
-@use '../style/colors' as *;
-@use '../style/features';
-@use '../style/input';
+@use "../style/typography" as *;
+@use "../style/colors" as *;
+@use "../style/features";
+@use "../style/input";
 
 @mixin cool-anim {
     background: linear-gradient(to right, $cl0, $cl1, $cl2, $cl1, $cl0);
@@ -15,8 +15,12 @@
 }
 
 @keyframes cool {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 100% 0%; }
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
 }
 
 main.app.main {
@@ -38,7 +42,8 @@ main.app.main {
 
         padding: 2rem;
 
-        &.settings {}
+        &.settings {
+        }
 
         &.list {
             padding: 0;
@@ -62,9 +67,9 @@ main.app.main {
                     > li {
                         @include features.rounded;
                         background-color: rgba(255, 255, 255, 0.05);
-                        
+
                         padding: 1rem 4rem;
-                        
+
                         display: grid;
                         grid-auto-flow: column;
                         grid-auto-columns: 1fr min-content;
@@ -75,7 +80,9 @@ main.app.main {
                             background: none;
                             transition: background-color 50ms ease-in-out;
 
-                            &:hover, &:active, &:focus {
+                            &:hover,
+                            &:active,
+                            &:focus {
                                 @include bg;
                             }
                         }
@@ -85,10 +92,13 @@ main.app.main {
         }
 
         &.items {
-            form, div {
+            form,
+            div {
                 width: 100%;
 
-                button, input, div.file-input {
+                button,
+                input,
+                div.file-input {
                     width: 100%;
                     margin: 0.5rem 0;
                 }

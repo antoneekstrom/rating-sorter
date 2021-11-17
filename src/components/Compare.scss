@@ -1,7 +1,7 @@
-@use '../style/typography' as *;
-@use '../style/colors' as *;
-@use '../style/features';
-@use '../style/input';
+@use "../style/typography" as *;
+@use "../style/colors" as *;
+@use "../style/features";
+@use "../style/input";
 
 main.app.compare {
     display: grid;
@@ -20,7 +20,7 @@ main.app.compare {
             @include cols-1;
             @include bg;
         }
-        
+
         > button {
             border-radius: 0;
             width: 100%;

@@ -1,6 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./components/App";
 
 // TODO
 // undo feature
@@ -14,4 +14,4 @@ import App from './components/App';
 // shell sort 🐢🐢🐢
 
 const root = document.querySelector("#root");
-ReactDOM.render(<App/>, root);
+ReactDOM.render(<App />, root);

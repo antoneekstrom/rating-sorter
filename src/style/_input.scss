@@ -1,6 +1,6 @@
-@use './typography' as *;
-@use './colors' as *;
-@use './features';
+@use "./typography" as *;
+@use "./colors" as *;
+@use "./features";
 
 @mixin input-style {
     @include features.rounded;
@@ -38,7 +38,8 @@ label {
     font-size: $font-size-xs;
 }
 
-form, .form {
+form,
+.form {
     div.row {
         display: grid;
         grid-template-columns: 1fr min-content;

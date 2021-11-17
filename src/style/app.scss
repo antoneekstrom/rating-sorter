@@ -1,14 +1,17 @@
-@use './typography' as *;
-@use './colors' as *;
-@use './features';
-@use './input';
+@use "./typography" as *;
+@use "./colors" as *;
+@use "./features";
+@use "./input";
 
 :root {
     @include typography-root;
     @include colors-root;
 }
 
-html, body, #root, main.app {
+html,
+body,
+#root,
+main.app {
     @include cols-0;
     background-color: $bg;
 

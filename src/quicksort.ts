@@ -1,13 +1,17 @@
-
 export type Compare<T> = (a: T, b: T) => Promise<boolean>;
 
-export default async function quickSort<T>(arr: T[], compare: Compare<T>, start = 0, end = arr.length - 1): Promise<T[]> {
+export default async function quickSort<T>(
+    arr: T[],
+    compare: Compare<T>,
+    start = 0,
+    end = arr.length - 1
+): Promise<T[]> {
     if (start >= end) return;
 
     let index = await partition(arr, compare, start, end);
-    
-    await quickSort(arr, compare, start, index - 1)
-    await quickSort(arr, compare, index + 1, end)
+
+    await quickSort(arr, compare, start, index - 1);
+    await quickSort(arr, compare, index + 1, end);
 
     return arr;
 }
@@ -18,10 +22,15 @@ function swap<T>(arr: T[], a: number, b: number) {
     arr[b] = temp;
 }
 
-async function partition<T>(arr: T[],  compare: Compare<T>, start: number, end: number) {
+async function partition<T>(
+    arr: T[],
+    compare: Compare<T>,
+    start: number,
+    end: number
+) {
     const pivotValue = arr[end];
     let pivotIndex = start;
-    
+
     for (let i = start; i < end; i++) {
         const result = await compare(arr[i], pivotValue);
         if (result) {
@@ -29,7 +38,7 @@ async function partition<T>(arr: T[],  compare: Compare<T>, start: number, end: 
             pivotIndex++;
         }
     }
-    
+
     swap(arr, pivotIndex, end);
 
     return pivotIndex;

@@ -1,4 +1,4 @@
-@use './colors' as *;
+@use "./colors" as *;
 
 $font-size-xs: var(--font-size-xs);
 $font-size-s: var(--font-size-s);
@@ -10,7 +10,7 @@ $font-size-xl: var(--font-size-xl);
     @include cols-0;
 
     font-size: 13px;
-    font-family: 'Nunito';
+    font-family: "Nunito";
     color: $fg;
 
     --font-size-xs: 1.2rem;
@@ -20,8 +20,16 @@ $font-size-xl: var(--font-size-xl);
     --font-size-xl: 3rem;
 }
 
-h1, h2, h3, p, span, input, button, a, label {
-    font-family: 'Nunito';
+h1,
+h2,
+h3,
+p,
+span,
+input,
+button,
+a,
+label {
+    font-family: "Nunito";
     font-weight: 500;
     font-size: $font-size-s;
     margin: 0;
