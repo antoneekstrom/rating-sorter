@@ -9,3 +9,6 @@ Uses promises as a comparator in the sorting algorithm, so that it waits until t
 
 The algorithm asks to compare two items, and this is delegated to the user which can pick between the two options.
 The promise is resolved when the user clicks on an option, this lets the program continue until done.
+
+## Credits
+- Mr. MechaFlex
